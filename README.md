@@ -1,6 +1,5 @@
 # digital-gurukul
 08/02/2026
-hi swyom this side . 
 
 It is a web and mobile based online e-learning and proctored examination platform for any educational institute or industries. mainly there is total 3 type of users (3 screens) for different level & role.
 
