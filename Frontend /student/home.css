@@ -1,0 +1,12 @@
+/* Theme colors */
+:root {
+    --bg: radial-gradient(circle at center, #ffffff 20%, #1afff9 90%);
+}
+
+.bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
