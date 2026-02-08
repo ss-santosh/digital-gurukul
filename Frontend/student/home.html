@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="../student/src/LOGO DG.png" alt="Logo" width=420px height=10px>
+            <img src="../student/src/LOGO DG.png" alt="Logo" width=320px height=10px>
         </div>
 
         <ul class="nav-links">
@@ -25,29 +25,165 @@
                     height="30"></Button>
             <Button class="profile" onclick="window.location.href='profile.html'"><img
                     src="../student/src/profileimg.png" width="30" height="30"></Button>
-
+        </ul>
     </nav>
+
+    <div class="header">
+        <div class="headText">
+            <h1>Welcome Student Name </h1>
+            <p>BIJU PATNAYAK UNIVERSITY OF TECHNOLOGY ,ROULKELA </p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="hour" id="hoursSpent">
+            <div class="textContent">
+                <h2>Hours Spent</h2>
+                <p>20</p>
+            </div>
+        </div>
+        <div class="hour" id="ExamAttended">
+            <div class="textContent">
+                <h2>Exam Attended</h2>
+                <p>20</p>
+            </div>
+        </div>
+        <div class="hour" id="watchVideo">
+            <div class="textContent">
+                <h2>Video Watched</h2>
+                <p>20</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="messageNotice">
+        <section class="message-section">
+            <h2>Message from Digital Gurukul</h2>
+
+            <ul class="message-list">
+                <li>
+                    Digital Gurukul is a secure e-learning platform designed to provide
+                    quality education through online courses and proctored examinations.
+                </li>
+
+                <li>
+                    Students can access study materials anytime, attend online exams,
+                    and track their academic progress easily.
+                </li>
+
+                <li>
+                    Instructors can create courses, manage content, and conduct secure
+                    online assessments with real-time monitoring.
+                </li>
+
+                <li>
+                    The platform ensures fair examinations using advanced proctoring
+                    techniques and monitoring systems.
+                </li>
+
+                <li>
+                    User data and academic records are protected with strong security
+                    and privacy measures.
+                </li>
+
+                <li>
+                    Digital Gurukul promotes flexible, reliable, and technology-driven
+                    learning for modern education.
+                </li>
+            </ul>
+        </section>
+
+
+       <div class="to-do">
+    <h2>To-Do List</h2>
+
+    <div class="todo-input">
+        <input type="text" id="taskInput" placeholder="Enter your task..." />
+        
+        <select id="priorityInput">
+            <option value="normal">Normal</option>
+            <option value="important">Important</option>
+            <option value="urgent">Urgent</option>
+        </select>
+
+        <button onclick="addTask()">Add</button>
+    </div>
+
+
+    <ul class="todo-list" id="todoList">
+       
     </ul>
+</div>
 
+</body>
+<script src="script.js"></script>
 
-    <script>
-        function themeToggle() {
-            document.body.classList.toggle("dark-theme");
+<script>
+    const track = document.getElementById("sliderTrack");
+    const slideWidth = 650;
+    let index = 0;
 
-            const toggleBtn = document.querySelector(".theme-toggle");
+    setInterval(() => {
+        index++;
+        track.style.transition = "transform 0.8s ease-in-out";
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
 
-            if (document.body.classList.contains("dark-theme")) {
-                toggleBtn.innerHTML = '<img src="../student/src/sun.png" width="30">';
-            } else {
-                toggleBtn.innerHTML = '<img src="../student/src/moon.png" width="30">';
-            }
+        // When last image, reset smoothly
+        if (index === track.children.length - 1) {
+            setTimeout(() => {
+                track.style.transition = "none";
+                track.style.transform = "translateX(0)";
+                index = 0;
+            }, 800);
         }
-    </script>
+    }, 3000);
+</script>
 
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+<script>
+function addTask() {
+    const taskText = document.getElementById("taskInput").value.trim();
+    const priority = document.getElementById("priorityInput").value;
+    const todoList = document.getElementById("todoList");
 
-    <dotlottie-wc class="bot" src="https://lottie.host/192ab4bd-4000-4617-8047-deb11ea41193/ZbkTjfbduP.lottie"
-        style="width: 100px;height: 100px" autoplay loop></dotlottie-wc>
+    if (taskText === "") {
+        alert("Please enter a task");
+        return;
+    }
+
+    const li = document.createElement("li");
+
+    const textSpan = document.createElement("span");
+    textSpan.className = "task-text";
+    textSpan.innerText = taskText;
+
+    const badgeSpan = document.createElement("span");
+    badgeSpan.className = `task-badge ${priority}`;
+    badgeSpan.innerText =
+        priority.charAt(0).toUpperCase() + priority.slice(1);
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.className = "delete-btn";
+    deleteBtn.innerText = "✖";
+    deleteBtn.onclick = () => li.remove();
+
+    li.appendChild(textSpan);
+    li.appendChild(badgeSpan);
+    li.appendChild(deleteBtn);
+
+    todoList.appendChild(li);
+
+    document.getElementById("taskInput").value = "";
+}
+</script>
+
+
+
+
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+
+<dotlottie-wc class="bot" src="https://lottie.host/192ab4bd-4000-4617-8047-deb11ea41193/ZbkTjfbduP.lottie"
+    style="width: 100px;height: 100px" autoplay loop></dotlottie-wc>
 </body>
 
 </html>
