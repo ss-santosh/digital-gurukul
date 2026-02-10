@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro-Skills</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../Frontend/student/src/LOGO DG.png" alt="Digital Gurukul Logo" width="380">
+    </div>
+
+    <div class="auth-switch">
+  <button class="auth-btn active" id="loginBtn">Login</button>
+  <button class="auth-btn" id="signupBtn">Sign Up</button>
+</div>
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>
+        Learn a New Skill<br />
+        <span class="underline">Everyday</span>, Anytime,<br />
+        and Anywhere.
+      </h1>
+
+      <p>
+        <strong>1000+</strong> Courses covering all tech domains for you to
+        learn and explore new opportunities. Learn from Industry Experts
+        and land your Dream Job.
+      </p>
+
+      <div class="hero-buttons">
+  <button class="btn-primary">Start Trial</button>
+  <button class="btn-outline">How it Works</button>
+</div>
+
+
+      <div class="stats">
+        <div>
+          <h2 class="yellow">1000+</h2>
+          <p>Courses to<br />choose from</p>
+        </div>
+        <div>
+          <h2 class="blue">5000+</h2>
+          <p>Students<br />Trained</p>
+        </div>
+        <div>
+          <h2 class="orange">200+</h2>
+          <p>Professional<br />Trainers</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="circle-bg">
+        <!-- <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+             alt="Student" /> -->
+      </div>
+
+      <!-- Decorative shapes -->
+      <div class="shape rocket"><img src="../landingpage/src/5143537-removebg-preview 1.png" alt=""></div>
+      <div class="shape trophy"><img src="../landingpage/src/5143494-removebg-preview 1.png" alt=""></div>
+      <div class="shape purple"></div>
+      <div class="shape yellow"></div>
+      <div class="shape blue"></div>
+    </div>
+  </section>
+
+</body>
+<script>
+  const loginBtn = document.getElementById("loginBtn");
+  const signupBtn = document.getElementById("signupBtn");
+
+  loginBtn.addEventListener("click", () => {
+    loginBtn.classList.add("active");
+    signupBtn.classList.remove("active");
+  });
+
+  signupBtn.addEventListener("click", () => {
+    signupBtn.classList.add("active");
+    loginBtn.classList.remove("active");
+  });
+</script>
+
+</html>

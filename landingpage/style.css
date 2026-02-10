@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #76e5f8;
+  color: #000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  background: #000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  width: 60px;
+}
+
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #1e88e5;
+}
+
+.nav-buttons button {
+  margin-left: 10px;
+}
+
+/* Buttons */
+.auth-switch {
+  display: flex;
+  gap: 10px;
+}
+
+/* Base button */
+.auth-btn {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: 2px solid #1e88e5;
+  background: transparent;
+  color: #1e88e5;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Active (selected) */
+.auth-btn.active {
+  background: #1e88e5;
+  color: #fff;
+}
+
+/* Hover = preview switch */
+.auth-btn:not(.active):hover {
+  background: #1e88e5;
+  color: #fff;
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 170px 80px;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  margin-bottom: 23px;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 6px;
+  background: #fbc02d;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.hero-left p {
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  bottom: 20px;
+  position: relative;
+  padding-top: 10px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: #1e88e5;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  color: #1e88e5;
+  border: 2px solid #1e88e5;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #1e88e5;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stats h2 {
+  font-size: 32px;
+}
+
+.stats p {
+  color: #555;
+  font-size: 14px;
+}
+
+.yellow { color: #fbc02d; }
+.blue { color: #1e88e5; }
+.orange { color: #fb8c00; }
+
+/* Right Section */
+.hero-right {
+  position: relative;
+  width: 35%;
+}
+
+.circle-bg {
+  background: #ff8a50;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circle-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Shapes */
+.shape {
+  position: absolute;
+  font-size: 40px;
+}
+
+.rocket {
+  bottom: 20%;
+  left: -300px;
+}
+
+.trophy {
+  top: 50%;
+  right: -90px;
+}
+
+.shape.purple {
+  width: 80px;
+  height: 80px;
+  background: #7e57c2;
+  border-radius: 50%;
+  top: 0;
+  right: 40px;
+}
+
+.shape.yellow {
+  width: 60px;
+  height: 60px;
+  background: #fbc02d;
+  border-radius: 50%;
+  bottom: 30px;
+  left: 40px;
+}
+
+.shape.blue {
+  width: 50px;
+  height: 50px;
+  background: #1e88e5;
+  border-radius: 50%;
+  bottom: -10px;
+  left: 120px;
+}
+
+
