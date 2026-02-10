@@ -83,12 +83,12 @@ nav a.active {
 }
 
 .hero-left {
-  width: 50%;
+  width: 70%;
 }
 
 .hero-left h1 {
-  font-size: 50px;
-  line-height: 1.2;
+  font-size: 60px;
+  line-height: 1.3;
   margin-bottom: 23px;
 }
 
@@ -214,7 +214,7 @@ nav a.active {
 
 .trophy {
   top: 50%;
-  right: -90px;
+  right: -65px;
 }
 
 .shape.purple {
