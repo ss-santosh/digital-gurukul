@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
+     <nav class="navbar">
+        <div class="logo">
+            <img src="../student/src/LOGO DG.png" alt="Logo" width=320px height=10px>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="exam.html">Exam</a></li>
+            <button class="theme-toggle" onclick="themeToggle()"><img src="../student/src/moon.png" width="30"></button>
+            <Button class="notification" onclick="Notification()"><img src="../student/src/bell.png" width="30"
+                    height="30"></Button>
+            <Button class="profile" onclick="window.location.href='profile.html'"><img
+                    src="../student/src/profileimg.png" width="30" height="30"></Button>
+        </ul>
+    </nav>
+
     <div>
         <h1>Profile</h1>
         <p>Welcome to your profile page! Here you can view and update your personal information, track your progress, and manage your account settings. Keep your profile up-to-date to get the most out of our platform and stay connected with your learning journey. Explore your profile and make it your own!</p>  
