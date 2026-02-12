@@ -47,18 +47,22 @@
 
       <div class="stats">
         <div>
-          <h2 class="yellow">1000+</h2>
+          <h2 class="yellow live-counter" data-base="1000">1000+</h2>
           <p>Courses to<br />choose from</p>
         </div>
+
         <div>
-          <h2 class="blue">5000+</h2>
+          <h2 class="blue live-counter" data-base="5000">5000+</h2>
           <p>Students<br />Trained</p>
         </div>
+
         <div>
-          <h2 class="orange">200+</h2>
+          <h2 class="orange live-counter" data-base="200">200+</h2>
           <p>Professional<br />Trainers</p>
         </div>
       </div>
+
+
     </div>
 
     <div class="hero-right">
@@ -77,39 +81,128 @@
   </section>
 
   <div class="carousel">
-    <div class="track">
-      <!-- First Set -->
-      <div class="card">1</div>
-      <div class="card">2</div>
-      <div class="card">3</div>
-      <div class="card">4</div>
-      <div class="card">5</div>
-      <div class="card">6</div>
-      <div class="card">7</div>
-      <div class="card">8</div>
-      <div class="card">9</div>
-      <div class="card">10</div>
-      <div class="card">11</div>
+  <div class="track">
 
-      <!-- Duplicate Set (IMPORTANT for infinite effect) -->
-      <div class="card">1</div>
-      <div class="card">2</div>
-      <div class="card">3</div>
-      <div class="card">4</div>
-      <div class="card">5</div>
-      <div class="card">6</div>
-      <div class="card">7</div>
-      <div class="card">8</div>
-      <div class="card">9</div>
-      <div class="card">10</div>
-      <div class="card">11</div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
     </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tata_Consultancy_Services_old_logo.svg/1280px-Tata_Consultancy_Services_old_logo.svg.png" alt="TCS">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/1280px-Infosys_logo.svg.png" alt="Infosys">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/HCL_Technologies_logo.svg" alt="HCL">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/3840px-Accenture.svg.png" alt="Accenture">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cognizant_logo_2022.svg/1280px-Cognizant_logo_2022.svg.png" alt="Cognizant">
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Capgemini_201x_logo.svg/1280px-Capgemini_201x_logo.svg.png" alt="Capgemini">
+    </div>
+
   </div>
+</div>
 
+<section class="about">
+  <div class="about-container">
 
+    <!-- LEFT IMAGE SIDE -->
+    <div class="about-image">
+      <div class="image-wrapper">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="About Image">
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT SIDE -->
+    <div class="about-content">
+      <h1>About Us</h1>
+
+      <p>
+        Welcome to AU Natural Organics. We are an organic store creating
+        natural beauty products that nurture and beautify your skin in a
+        healthy way. We offer the healthiest, purest, and most effective
+        organic skincare products.
+      </p>
+
+      <p>
+        We curate all our products, including organic essential oils,
+        carrier oils, and natural ingredients carefully selected
+        for eco-friendly wellness.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
 </body>
+
+<script>
+  const track = document.querySelector(".track");
+  track.innerHTML += track.innerHTML;
+</script>
+
+
+<script>
+  const counters = document.querySelectorAll(".live-counter");
+
+  counters.forEach(counter => {
+    let baseValue = parseInt(counter.getAttribute("data-base"));
+    let currentValue = baseValue;
+
+    function updateCounter() {
+      // Random small change
+      let change = Math.floor(Math.random() * 5);
+
+      // Randomly increase or decrease
+      if (Math.random() > 0.3) {
+        currentValue += change;  // mostly increase
+      } else {
+        currentValue -= change;
+      }
+
+      // Prevent going below base
+      if (currentValue < baseValue) {
+        currentValue = baseValue;
+      }
+
+      counter.innerText = currentValue.toLocaleString() + "+";
+
+      setTimeout(updateCounter, 1500);
+    }
+
+    updateCounter();
+  });
+</script>
+
+
 <script>
   const loginBtn = document.getElementById("loginBtn");
   const signupBtn = document.getElementById("signupBtn");
